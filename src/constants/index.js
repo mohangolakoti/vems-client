@@ -12,7 +12,9 @@ import vishnu1 from './logos/vishnu.png'
 import growth from './logos/growth.png'
 import predictions from './logos/predictions.png'
 import tie from './images/tie.jpg'
+import tiegrad from './tiegrad.jpg'
+import team from './team.png'
 
 export {
-    home,chart,power,user,light,dark,pcc,logo,vishnu,green_fusion,vishnu1, growth, predictions, tie
+    home,chart,power,user,light,dark,pcc,logo,vishnu,green_fusion,vishnu1, growth, predictions, tie, tiegrad, team
 }

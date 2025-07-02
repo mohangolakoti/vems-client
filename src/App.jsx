@@ -12,11 +12,12 @@ import Data from './pages/Data';
 import PredictionBarChart from './pages/PredictionBarChart';
 import Tiegrad from './components/Tiegrad';
 import Video from './components/Video';
+import Team from './components/Team';
 
 // Home Carousel Component
-/* const HomeCarousel = () => {
-  const slides = [<Dashboard />, <Tiegrad />, <Video />];
-  const durations = [20000, 20000, 142000]; // Dashboard (20s), Tiegrad (20s), Video (2 mins)
+const HomeCarousel = () => {
+  const slides = [<Dashboard />, <Tiegrad />, <Team />];
+  const durations = [20000, 10000, 10000]; // Dashboard (20s), Tiegrad (20s), Video (2 mins)
   const [currentIndex, setCurrentIndex] = useState(0);
 
   useEffect(() => {
@@ -28,13 +29,13 @@ import Video from './components/Video';
   }, [currentIndex]);
 
   return <div>{slides[currentIndex]}</div>;
-}; */
+};
 
 const App = () => {
   return (
     <div>
       <Routes>
-        <Route path="/" element={<Dashboard />} />
+        <Route path="/" element={<HomeCarousel />} />
         <Route path="/graphs" element={<DatewiseGraphs />} />
         <Route path="/Pcc1" element={<Pcc1 />} />
         <Route path="/Pcc2" element={<Pcc2 />} />
@@ -46,6 +47,7 @@ const App = () => {
         <Route path="/pred" element={<PredictionBarChart />} />
         <Route path="/video" element={<Video />} />
         <Route path="/image" element={<Tiegrad />} />
+        <Route path='/team' element={<Team/>} />
       </Routes>
     </div>
   );
