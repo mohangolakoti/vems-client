@@ -18,12 +18,12 @@ const RealTimeKvaMeter = ({ kva, todayKva, monthKva }) => {
 
   // Function to check KVA limit and show alert
   const checkLimit = () => {
-    if (kva > 1100 && !alertTriggered) {
+    if (kva > 1450 && !alertTriggered) {
       setShowAlert(true);
       audioRef.current.loop = true; // Loop the alert sound
       audioRef.current.play(); // Play alert sound
       setAlertTriggered(true); // Set flag to indicate alert has been triggered
-    } else if (kva <= 1100 && alertTriggered) {
+    } else if (kva <= 1450 && alertTriggered) {
       setShowAlert(false);
       audioRef.current.pause();
       audioRef.current.currentTime = 0; // Reset audio
